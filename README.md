@@ -1,0 +1,1 @@
+# Genetic_Codon_Table_Sruti_Torgal

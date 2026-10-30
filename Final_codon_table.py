@@ -70,12 +70,12 @@ for i in range(0, len(dna_sequence) - 2, 3):
         codon = dna_sequence[i:i+3]
         codons.append(codon)
 
-    incomplete_codon = dna_sequence[len(codons) * 3:]
+incomplete_codon = dna_sequence[len(codons) * 3:]
+print("Codons:", codons)
+if incomplete_codon:
+    print("Incomplete codon:", incomplete_codon)
 
-    print("Codons:", codons)if incomplete_codon:
-        print("Incomplete codon:", incomplete_codon)
-
-#Translate the sequences into amini acid sequence
+#Translate the sequences into amino acid sequence
 if sequence != "" and (
     all(base in "ATGC" for base in sequence) or
     all(base in "AUGC" for base in sequence)

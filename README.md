@@ -178,5 +178,5 @@ ORF at 1-9: ATGAAATAA
 codon-table-generator/
 ├── main.py
 ├── README.md
-└── REPORT.md   # Optional full project report
+└── REPORT.md   
 ```

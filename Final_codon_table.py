@@ -9,4 +9,13 @@ codon_table = {
     "TAA": "Stop", "TAG": "Stop",
     "TGT": "Cysteine", "TGC": "Cysteine",
     "TGA": "Stop", "TGG": "Tryptophan",
+    
+    "CTT": "Leucine", "CTC": "Leucine",
+    "CTA": "Leucine", "CTG": "Leucine",
+    "CCT": "Proline", "CCC": "Proline",
+    "CCA": "Proline", "CCG": "Proline",
+    "CAT": "Histidine", "CAC": "Histidine",
+    "CAA": "Glutamine", "CAG": "Glutamine",
+    "CGT": "Arginine", "CGC": "Arginine",
+    "CGA": "Arginine", "CGG": "Arginine",
 }

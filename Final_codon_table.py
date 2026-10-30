@@ -141,6 +141,12 @@ print("\n=== Codon Frequencies ===")
 for codon, count in codon_counts.most_common():
     print(f"{codon}: {count}")
 
+#Amino acid frequency counter
+aa_counts = Counter(amino_acids)
+print("\n=== Amino Acid Frequencies ===")
+for aa, count in aa_counts.most_common():
+    print(f"{aa}: {count}")
+
 
 
 

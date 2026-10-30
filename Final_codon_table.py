@@ -37,3 +37,7 @@ codon_table = {
     "GGT": "Glycine", "GGC": "Glycine",
     "GGA": "Glycine", "GGG": "Glycine"
 }
+
+#Print the total number of codons.
+
+print("Total number of codons:", len(codon_table))

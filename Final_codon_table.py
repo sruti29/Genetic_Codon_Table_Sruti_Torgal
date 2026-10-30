@@ -118,4 +118,19 @@ if sequence != "" and (
 
     print(translation_df)
 
+#GC Content
+def gc_content(dna_sequence):
+    """Return GC content as a percentage (0.0 – 100.0)."""
+    if not dna_sequence:
+        return 0.0
+    gc = sum(1 for base in dna_sequence if base in "GC")
+    return gc / len(dna_sequence) * 100
+
+dna_sequence = sequence.replace("U", "T")
+codons = []
+...
+print("Amino acids:", amino_acids)
+
+print(f"GC content: {gc_content(dna_sequence):.2f}%")
+
 

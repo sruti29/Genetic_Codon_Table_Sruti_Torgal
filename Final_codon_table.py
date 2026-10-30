@@ -166,6 +166,13 @@ def protein_mass(amino_acids):
 
 print(f"Estimated protein mass: {protein_mass(amino_acids):.1f} Da")
 
+#Complementary DNA strand
+complement = {"A": "T", "T": "A", "G": "C", "C": "G"}
+comp_strand = "".join(complement[b] for b in dna_sequence)
+print("Complement strand:", comp_strand)
+
+
+
 
 
 

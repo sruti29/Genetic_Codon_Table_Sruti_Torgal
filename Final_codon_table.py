@@ -41,3 +41,6 @@ codon_table = {
 #Print the total number of codons.
 
 print("Total number of codons:", len(codon_table))
+
+#DNA/RNA Sequence input
+sequence = input("Enter a DNA or RNA sequence: ").upper().strip()

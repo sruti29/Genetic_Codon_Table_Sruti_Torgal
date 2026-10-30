@@ -72,4 +72,10 @@ for i in range(0, len(dna_sequence) - 2, 3):
 
     incomplete_codon = dna_sequence[len(codons) * 3:]
 
-    print("Codons:", codons)
+    print("Codons:", codons)if incomplete_codon:
+        print("Incomplete codon:", incomplete_codon)
+
+
+    
+
+#

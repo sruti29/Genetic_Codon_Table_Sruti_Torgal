@@ -1,4 +1,8 @@
 # Codon Table Generator
+Sruti Torgal
+MSc. Bioinformatics & Biotechnology
+Chanakya university
+
 
 A Python program that takes a DNA or RNA sequence and translates it into the corresponding amino acid sequence using the standard genetic code. Along with translation, it reports GC content, codon and amino acid frequencies, estimated protein mass, complement strands, and open reading frames (ORFs).
 
@@ -35,8 +39,8 @@ Install pandas if you don't have it:
 ```bash
 pip install pandas
 
-HOW TO RUN
-How to Run — Step by Step
+
+## How to Run — Step by Step
 Step 1 — Open a terminal in the project folder
 The folder should contain main.py. On Windows, you can open a terminal in that folder by right-clicking and choosing "Open in Terminal" (or typing cmd in the address bar of File Explorer). On Mac/Linux, cd into the folder.
 
@@ -69,7 +73,7 @@ The program prints all analysis sections in order, then exits. Nothing is saved 
 
 To run again, repeat Step 3.
 
-EXAMPLE OUTPUT
+## EXAMPLE OUTPUT
 For input ATGAAATAAGGG:
 
 text
@@ -108,7 +112,7 @@ ORF at 1-9: ATGAAATAA
 2   TAA           Stop
 3   GGG        Glycine
 
-VALID INPUT EXAMPLES
+## VALID INPUT EXAMPLES
 Input	Type	Result
 ATGTTTGGT	DNA	Translates normally
 AUGUUUGGU	RNA	Translates normally (same result)
@@ -119,7 +123,7 @@ GGGCCC	DNA	GC content 100.00%
 ATTGCATGCATUCG	Mixed	Error: contains both T and U
 ATGXYZ	Invalid	Error: invalid characters
 
-HOW IT WORKS
+## HOW IT WORKS
 Codon table — a dictionary maps each of the 64 codons to its amino acid name. Lookup is O(1) per codon.
 
 Input validation — the raw input is uppercased and checked to confirm it's pure DNA or pure RNA (no mixing, no invalid characters).
@@ -134,7 +138,7 @@ Analysis features — start/stop codons, frequencies, protein mass, complement s
 
 Output — printed section by section, ending with a pandas DataFrame of the codon-to-amino-acid mapping.
 
-LIMITATIONS
+## LIMITATIONS
 Only the first reading frame is translated (positions 1, 4, 7, …). Other frames aren't analysed.
 
 Uses the standard genetic code only — mitochondrial or bacterial variants aren't supported.
@@ -147,7 +151,7 @@ Input is interactive only. No command-line arguments or file input.
 
 No automated test suite; testing was done manually.
 
-FUTURE IMPROVEMENT
+## FUTURE IMPROVEMENT
 Translate in all three reading frames
 
 Export results to CSV
@@ -160,18 +164,16 @@ Add automated unit tests with unittest
 
 Plot codon usage as a bar chart with matplotlib
 
-Project Structure
+## Project Structure
 codon-table-generator/
 ├── main.py
 ├── README.md
 └── REPORT.md   (optional — full project report)
 
+## Reference
 
 
 
-| `[SRUTI TORGAL ]` | 
-| `MSc [Bioinformatics & Biotechnology]` | 
-| `[Chanakya University]` | 
-| `[October 2026]` | 
+
 
 ---

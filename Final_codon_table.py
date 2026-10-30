@@ -55,3 +55,12 @@ elif not all(base in "ATGC" for base in sequence) and \
 
 else:
     print("Sequence accepted:", sequence)
+
+#
+if sequence != "" and (
+    all(base in "ATGC" for base in sequence) or
+    all(base in "AUGC" for base in sequence)
+):
+    dna_sequence = sequence.replace("U", "T")
+
+    codons = []

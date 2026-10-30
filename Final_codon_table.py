@@ -75,7 +75,15 @@ for i in range(0, len(dna_sequence) - 2, 3):
     print("Codons:", codons)if incomplete_codon:
         print("Incomplete codon:", incomplete_codon)
 
-
-    
-
 #
+if sequence != "" and (
+    all(base in "ATGC" for base in sequence) or
+    all(base in "AUGC" for base in sequence)
+):
+    amino_acids = []
+
+    for codon in codons:
+        amino_acid = codon_table[codon]
+        amino_acids.append(amino_acid)
+
+    print("Amino acids:", amino_acids)

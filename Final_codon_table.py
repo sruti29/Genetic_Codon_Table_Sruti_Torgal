@@ -171,6 +171,10 @@ complement = {"A": "T", "T": "A", "G": "C", "C": "G"}
 comp_strand = "".join(complement[b] for b in dna_sequence)
 print("Complement strand:", comp_strand)
 
+#Reverse complement
+reverse_complement = comp_strand[::-1]
+print("Reverse complement:", reverse_complement)
+
 
 
 

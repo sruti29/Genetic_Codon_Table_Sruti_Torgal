@@ -44,3 +44,14 @@ print("Total number of codons:", len(codon_table))
 
 #DNA/RNA Sequence input
 sequence = input("Enter a DNA or RNA sequence: ").upper().strip()
+
+#Sequence validation
+if sequence == "":
+    print("Error: Sequence cannot be empty.")
+
+elif not all(base in "ATGC" for base in sequence) and \
+     not all(base in "AUGC" for base in sequence):
+    print("Error: Enter only A, T, G, C for DNA or A, U, G, C for RNA.")
+
+else:
+    print("Sequence accepted:", sequence)

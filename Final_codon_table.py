@@ -56,7 +56,7 @@ elif not all(base in "ATGC" for base in sequence) and \
 else:
     print("Sequence accepted:", sequence)
 
-#
+#DNA/RNA Acceptance check
 if sequence != "" and (
     all(base in "ATGC" for base in sequence) or
     all(base in "AUGC" for base in sequence)
@@ -64,3 +64,12 @@ if sequence != "" and (
     dna_sequence = sequence.replace("U", "T")
 
     codons = []
+
+#Split the DNA Sequence into codon
+for i in range(0, len(dna_sequence) - 2, 3):
+        codon = dna_sequence[i:i+3]
+        codons.append(codon)
+
+    incomplete_codon = dna_sequence[len(codons) * 3:]
+
+    print("Codons:", codons)

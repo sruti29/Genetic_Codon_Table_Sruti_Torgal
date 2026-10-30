@@ -175,6 +175,31 @@ print("Complement strand:", comp_strand)
 reverse_complement = comp_strand[::-1]
 print("Reverse complement:", reverse_complement)
 
+#open reading frame finder
+
+def find_orfs(dna_seq):
+    """Find ORFs: start at ATG, end at first stop codon."""
+    stops = {"TAA", "TAG", "TGA"}
+    orfs = []
+    i = 0
+    while i < len(dna_seq) - 2:
+        codon = dna_seq[i:i+3]
+        if codon == "ATG":
+            # scan forward for a stop
+            for j in range(i, len(dna_seq) - 2, 3):
+                if dna_seq[j:j+3] in stops:
+                    orfs.append((i + 1, j + 3, dna_seq[i:j+3]))
+                    break
+        i += 3
+    return orfs
+
+print("\n=== Open Reading Frames (ORFs) ===")
+for start, end, seq in find_orfs(dna_sequence):
+    aa = [codon_table.get(seq[k:k+3], "Unknown") for k in range(0, len(seq), 3)]
+    print(f"ORF at {start}–{end}: {seq}")
+    print(f"  Amino acids: {aa}")
+
+
 
 
 

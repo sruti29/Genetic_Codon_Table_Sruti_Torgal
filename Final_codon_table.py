@@ -106,4 +106,16 @@ if sequence != "" and (
     print("Start codons:", start_codons if start_codons else "None found")
     print("Stop codons:", stop_codons if stop_codons else "None found")
 
+#Translation dataframe
+if sequence != "" and (
+    all(base in "ATGC" for base in sequence) or
+    all(base in "AUGC" for base in sequence)
+):
+    translation_df = pd.DataFrame({
+        "Codon": codons,
+        "Amino Acid": amino_acids
+    })
+
+    print(translation_df)
+
 

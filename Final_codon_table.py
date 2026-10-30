@@ -27,4 +27,13 @@ codon_table = {
     "AAA": "Lysine", "AAG": "Lysine",
     "AGT": "Serine", "AGC": "Serine",
     "AGA": "Arginine", "AGG": "Arginine",
+
+    "GTT": "Valine", "GTC": "Valine",
+    "GTA": "Valine", "GTG": "Valine",
+    "GCT": "Alanine", "GCC": "Alanine",
+    "GCA": "Alanine", "GCG": "Alanine",
+    "GAT": "Aspartic acid", "GAC": "Aspartic acid",
+    "GAA": "Glutamic acid", "GAG": "Glutamic acid",
+    "GGT": "Glycine", "GGC": "Glycine",
+    "GGA": "Glycine", "GGG": "Glycine"
 }

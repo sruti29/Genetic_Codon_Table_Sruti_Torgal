@@ -147,6 +147,25 @@ print("\n=== Amino Acid Frequencies ===")
 for aa, count in aa_counts.most_common():
     print(f"{aa}: {count}")
 
+#protein molecular weight estimate
+AA_MASS = {
+    "Alanine": 89.1, "Arginine": 174.2, "Asparagine": 132.1,
+    "Aspartic acid": 133.1, "Cysteine": 121.2, "Glutamine": 146.2,
+    "Glutamic acid": 147.1, "Glycine": 75.1, "Histidine": 155.2,
+    "Isoleucine": 131.2, "Leucine": 131.2, "Lysine": 146.2,
+    "Methionine": 149.2, "Phenylalanine": 165.2, "Proline": 115.1,
+    "Serine": 105.1, "Threonine": 119.1, "Tryptophan": 204.2,
+    "Tyrosine": 181.2, "Valine": 117.1, "Stop": 0.0,
+}
+
+def protein_mass(amino_acids):
+    """Rough estimate of molecular weight in Daltons (excludes Stop)."""
+    mass = sum(AA_MASS.get(aa, 0) for aa in amino_acids)
+    # subtract water per peptide bond
+    return mass - (max(len(amino_acids) - 1, 0) * 18.0)
+
+print(f"Estimated protein mass: {protein_mass(amino_acids):.1f} Da")
+
 
 
 

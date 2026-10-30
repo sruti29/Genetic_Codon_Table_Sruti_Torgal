@@ -18,4 +18,13 @@ codon_table = {
     "CAA": "Glutamine", "CAG": "Glutamine",
     "CGT": "Arginine", "CGC": "Arginine",
     "CGA": "Arginine", "CGG": "Arginine",
+
+    "ATT": "Isoleucine", "ATC": "Isoleucine",
+    "ATA": "Isoleucine", "ATG": "Methionine",
+    "ACT": "Threonine", "ACC": "Threonine",
+    "ACA": "Threonine", "ACG": "Threonine",
+    "AAT": "Asparagine", "AAC": "Asparagine",
+    "AAA": "Lysine", "AAG": "Lysine",
+    "AGT": "Serine", "AGC": "Serine",
+    "AGA": "Arginine", "AGG": "Arginine",
 }

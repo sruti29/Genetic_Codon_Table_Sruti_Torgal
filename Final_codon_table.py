@@ -75,7 +75,7 @@ for i in range(0, len(dna_sequence) - 2, 3):
     print("Codons:", codons)if incomplete_codon:
         print("Incomplete codon:", incomplete_codon)
 
-#
+#Translate the sequences into amini acid sequence
 if sequence != "" and (
     all(base in "ATGC" for base in sequence) or
     all(base in "AUGC" for base in sequence)
@@ -87,3 +87,23 @@ if sequence != "" and (
         amino_acids.append(amino_acid)
 
     print("Amino acids:", amino_acids)
+
+#Start and Stop codon
+if sequence != "" and (
+    all(base in "ATGC" for base in sequence) or
+    all(base in "AUGC" for base in sequence)
+):
+    start_codons = []
+    stop_codons = []
+
+    for codon in codons:
+        if codon == "ATG":
+            start_codons.append(codon)
+
+        if codon in ["TAA", "TAG", "TGA"]:
+            stop_codons.append(codon)
+
+    print("Start codons:", start_codons if start_codons else "None found")
+    print("Stop codons:", stop_codons if stop_codons else "None found")
+
+

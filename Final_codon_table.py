@@ -133,4 +133,14 @@ print("Amino acids:", amino_acids)
 
 print(f"GC content: {gc_content(dna_sequence):.2f}%")
 
+#CODON FREQUENCY COUNTER
+from collections import Counter
+
+codon_counts = Counter(codons)
+print("\n=== Codon Frequencies ===")
+for codon, count in codon_counts.most_common():
+    print(f"{codon}: {count}")
+
+
+
 
